@@ -6,13 +6,6 @@ var path 			      = require('path');
 
 var app = express();
 
-
-mongoose.connect('mongodb://ga-hackathon:ga@ds051585.mongolab.com:51585/heroku_6spv5l5r');
-mongoose.connection.once('open', function(){
-
-  //Load DB models
-  app.models = require('./server/models/index');
-
   app.use(express.static(path.join(__dirname, 'client')));
 
   // Load the routes.
@@ -23,4 +16,3 @@ mongoose.connection.once('open', function(){
 
   console.log("RUNNING");
   app.listen(process.env.PORT || 3000);
-});

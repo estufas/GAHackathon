@@ -1,16 +1,19 @@
-var app = angular.module('HackathonApp', ['ngRoute', 'HackathonCtrls']);
+var app = angular.module('PortfolioApp', ['ngRoute', 'PortfolioCtrls']);
 
 app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 		$routeProvider
 			.when(
 				'/', {
-					templateUrl: 'app/views/random.html',
+					templateUrl: 'app/views/index.html',
 					controller: 'HomeCtrl'
 				}
-			)
-			.when (
-				'/show', {
-					templateUrl: 'app/views/show.html'
+			).when(
+				'/projects', {
+					templateUrl: 'app/views/projects.html'
+				}
+			).when(
+				'/contact', {
+					templateUrl: 'app/views/contact.html'
 				}
 			).otherwise ({
 				templateUrl: 'views/404.html'

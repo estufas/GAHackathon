@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
 
-<html ng-app="HackathonApp">
+<html ng-app="PortfolioApp">
 <head>
-	<title>Quotable</title>
+	<title>Stuart Hiller</title>
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="app/assets/css/stylesheet.css">
@@ -14,12 +14,12 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-resource.js"></script>
 	<script src="app/app.js"></script>
 	<script src="app/controllers.js"></script>
-	<script src="app/services.js"></script>
 
 </head>
 <body>
-<div class="main">
-  <ng-view></ng-view>
-</div>
+	<div class="main">
+		<div ng-include="'app/views/navbar.html'"></div>
+		<ng-view></ng-view>
+	</div>
 </body>
 </html>
