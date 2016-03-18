@@ -4,12 +4,13 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
 		$routeProvider
 			.when(
 				'/', {
-					templateUrl: 'app/views/index.html',
-					controller: 'HomeCtrl'
+					templateUrl: 'app/views/index.html'
+					// controller: 'ScrollCtrl'
 				}
 			).when(
 				'/projects', {
-					templateUrl: 'app/views/projects.html'
+					templateUrl: 'app/views/projects.html',
+					controller: 'HomeCtrl'
 				}
 			).when(
 				'/contact', {

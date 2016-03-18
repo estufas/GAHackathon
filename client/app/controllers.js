@@ -1,8 +1,25 @@
+var $scope, $location;
 angular.module('PortfolioCtrls', [])
-.controller('HomeCtrl', ['$scope', '$location', function($scope, $location) {
-    $scope.backGround = {
-    	background: 'url(http://res.cloudinary.com/estufas/image/upload/v1455144798/IMG_3505_kakctb.jpg)'
-    }
+.controller('HomeCtrl', function($scope, $location) {
+    game = new Chess();
 
-  console.log($scope.backGround);
-}]);
+
+	var makeRandomMove = function() {
+	  var possibleMoves = game.moves();
+
+	  // exit if the game is over
+	  if (game.game_over() === true ||
+	    game.in_draw() === true ||
+	    possibleMoves.length === 0) return;
+
+	  var randomIndex = Math.floor(Math.random() * possibleMoves.length);
+	  game.move(possibleMoves[randomIndex]);
+	  board.position(game.fen());
+
+	  window.setTimeout(makeRandomMove, 500);
+	};
+
+	board = ChessBoard('board', 'start');
+	window.setTimeout(makeRandomMove, 500);
+});
+
