@@ -5,16 +5,17 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
 			.when(
 				'/', {
 					templateUrl: 'app/views/index.html'
-					// controller: 'ScrollCtrl'
+					// controller: 'HomeCtrl'
 				}
 			).when(
 				'/projects', {
-					templateUrl: 'app/views/projects.html',
-					controller: 'HomeCtrl'
+					templateUrl: 'app/views/bootstrap-custom.html'
+					// controller: 'HomeCtrl'
 				}
 			).when(
 				'/contact', {
 					templateUrl: 'app/views/contact.html'
+					// controller: 'HomeCtrl'
 				}
 			).otherwise ({
 				templateUrl: 'views/404.html'
