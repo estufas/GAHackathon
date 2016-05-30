@@ -1,6 +1,6 @@
 var $scope, $location;
 angular.module('PortfolioCtrls', [])
-.controller('HomeCtrl', function($scope, $location) {
+.controller('HomeCtrl', function($scope, $location, $window) {
     game = new Chess();
 
 
@@ -19,11 +19,12 @@ angular.module('PortfolioCtrls', [])
 	  window.setTimeout(makeRandomMove, 500);
 	};
 
-    $('menu a').bind('click',function(event){
+    $('ul li a').bind('click',function(event){
         var $anchor = $(this);
         $('body, html').stop().animate({
             scrollLeft: $($anchor.attr('href')).offset().left
-        }, 1000);
+        }, 700);
+        $window.scrollTo(0, 0);
         event.preventDefault();
     });
 
