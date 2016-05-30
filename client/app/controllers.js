@@ -19,6 +19,14 @@ angular.module('PortfolioCtrls', [])
 	  window.setTimeout(makeRandomMove, 500);
 	};
 
+    $('menu a').bind('click',function(event){
+        var $anchor = $(this);
+        $('body, html').stop().animate({
+            scrollLeft: $($anchor.attr('href')).offset().left
+        }, 1000);
+        event.preventDefault();
+    });
+
 	board = ChessBoard('board', 'start');
 	window.setTimeout(makeRandomMove, 500);
 });

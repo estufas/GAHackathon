@@ -39,3 +39,51 @@ body {
 #bottom {
     display: block;
 }
+menu {
+  margin: 0;
+  padding: 5px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #333333;
+  z-index: 1000;
+  box-shadow: #000 0 2px 5px;
+}
+section {
+  width: 310%;
+  margin-top: 0px;
+  margin: 0;
+  padding: 0;
+}
+
+#s1, #s2, #s3 {
+  position: relative;
+  width: 33%;
+  margin: 0;
+  margin-right: -5px;
+  padding: 0;
+  padding-top: 30px;
+  display: inline-block;
+}
+
+.corps {
+  width: 75%;
+  margin: auto;
+}
+
+#s1 {
+  background: url('http://rhinowoodrepair.com/wp-content/uploads/2014/03/wood-hi-res-dark2000x657.jpg') repeat-y;
+  color: #AAAAAA;
+}
+
+#s2 {
+  background: url('http://www.gabriellereece.com/wp-content/uploads/2012/08/metal-plate.jpg') repeat-y -350px 0px;
+  color: #111111;
+}
+
+#s3 {
+  background: url('http://desktopict.org/wp-content/uploads/2014/03/blue-water-wallpaper-2.jpg') repeat-y;
+  color: #111111;
+}
