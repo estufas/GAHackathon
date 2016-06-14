@@ -57,25 +57,37 @@ menu {
   box-shadow: #000 0 2px 5px;
 }
 section {
-  width: 310%;
+  width: 205%;
   margin-top: 0px;
   margin: 0;
   padding: 0;
 }
+#emailMessage {
+  width: 100%;
+}
 
-#s1, #s2, #s3 {
+#putin, #trump {
+  width: 25%;
+}
+#trump {
+  margin-left: 46.5%;
+}
+
+#s1, #s2 {
   position: relative;
-  width: 33%;
+  width: 50%;
   margin: 0;
   margin-right: -5px;
   padding: 0;
   padding-top: 30px;
   display: inline-block;
 }
-#s1, #s2 {
-  top: -300px;
+#s1 {
+  top: -295px;
 }
-
+#s3 {
+  top: -350px;
+}
 .corps {
   width: 75%;
   margin: auto;

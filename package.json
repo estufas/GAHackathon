@@ -11,8 +11,11 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.13.4",
+    "body-parser": "^1.14.2",
     "lodash": "^4.0.1",
     "mongoose": "^4.3.7",
+    "nodemailer": "^2.2.0",
+    "nodemailer-smtp-transport": "^2.2.2",
     "request": "^2.67.0"
   }
 }
